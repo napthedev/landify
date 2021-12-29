@@ -8,10 +8,16 @@
   </head>
   <body>
     <div
-      class="flex justify-center relative min-h-[866px] bg-cover bg-no-repeat"
+      class="
+        flex
+        justify-center
+        relative
+        md:min-h-[866px]
+        bg-cover bg-no-repeat
+      "
       style="background-image: url(/bg.svg)"
     >
-      <div class="max-w-[1110px] w-screen">
+      <div class="max-w-[1110px] px-6 w-screen">
         <div class="h-[72px] flex items-center justify-between">
           <div class="flex items-center gap-[32px]">
             <a href="#" class="flex items-center gap-[9.2px]">
@@ -19,7 +25,7 @@
               <p class="font-bold">Landify</p>
             </a>
 
-            <div class="flex items-center gap-[32px]">
+            <div class="hidden lg:flex items-center gap-[32px]">
               <a href="#">About</a>
               <a href="#">Products</a>
               <a href="#">Pricing</a>
@@ -42,32 +48,63 @@
           </div>
         </div>
 
-        <div class="mt-[96px] flex justify-between">
-          <div class="mt-[72px]">
-            <h1 class="text-[72px] leading-[98px] font-bold">
-              Organise projects.
-            </h1>
-            <h1 class="text-[72px] leading-[98px] font-bold">Get more done.</h1>
-
-            <button
+        <div class="md:mt-[96px] flex flex-col md:flex-row justify-between">
+          <div class="mt-[36px] md:mt-[72px]">
+            <h1
               class="
-                mt-[44px]
-                py-[12px]
-                px-[32px]
-                bg-[#8C30F5]
-                text-white
-                rounded-md
+                text-[48px]
+                lg:text-[72px]
+                leading-[64px]
+                md:leading-[98px]
+                font-bold
+                text-center
+                md:text-left
               "
             >
-              Get Started
-            </button>
+              Organise projects.
+            </h1>
+            <h1
+              class="
+                text-[48px]
+                lg:text-[72px]
+                leading-[64px]
+                md:leading-[98px]
+                font-bold
+                text-center
+                md:text-left
+              "
+            >
+              Get more done.
+            </h1>
+
+            <div class="flex justify-center md:justify-start">
+              <button
+                class="
+                  mt-[14px]
+                  md:mt-[44px]
+                  py-[12px]
+                  px-[32px]
+                  bg-[#8C30F5]
+                  text-white
+                  rounded-md
+                "
+              >
+                Get Started
+              </button>
+            </div>
           </div>
-          <img class="w-[320px] h-auto phone-shadow" src="/iphone.png" alt="" />
+          <div class="flex justify-center md:justify-start mt-[24px] md:mt-0">
+            <img
+              class="w-[320px] h-auto phone-shadow"
+              src="/iphone.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="my-[16px] flex justify-center">
+    <div class="mt-[48px] md:mt-[16px] mb-[16px] flex justify-center">
       <div class="flex flex-col items-stretch gap-[24px]">
         <div
           class="h-[1px]"
@@ -81,7 +118,17 @@
           "
         ></div>
 
-        <div class="flex h-[24px] items-center gap-[64px]">
+        <div
+          class="
+            flex flex-wrap
+            justify-center
+            min-h-[24px]
+            items-center
+            gap-[32px]
+            md:gap-[64px]
+            px-6
+          "
+        >
           <img src="/logo/airbnb.svg" alt="" />
           <img src="/logo/hubspot.svg" alt="" />
           <img src="/logo/google.svg" alt="" />
@@ -104,9 +151,9 @@
       </div>
     </div>
 
-    <div class="my-[64px]">
+    <div class="my-[64px] px-6">
       <div class="mb-[48px] text-center flex flex-col items-center">
-        <h1 class="text-[48px] leading-[64px] font-bold">
+        <h1 class="text-[36px] md:text-[48px] leading-[64px] font-bold">
           Tailor-made features
         </h1>
         <p class="max-w-[540px]">
@@ -117,8 +164,16 @@
 
       <div class="flex justify-center">
         <div
-          class="grid gap-[30px] max-w-[1110px] mb-[64px] w-screen"
-          style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))"
+          class="
+            grid
+            gap-[30px]
+            max-w-[1110px]
+            mb-[64px]
+            w-screen
+            grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-3
+          "
         >
           <div class="flex flex-col items-center text-center">
             <img src="/features/icon-1.svg" alt="" />
@@ -232,31 +287,57 @@
       </div>
     </div>
 
-    <div class="bg-[#D5FAFC] min-h-[896px] flex justify-center">
-      <div class="w-full max-w-[920px] flex gap-[30px] mt-[120px]">
-        <div class="flex-1 relative">
+    <div class="bg-[#D5FAFC] lg:min-h-[896px] flex justify-center">
+      <div
+        class="
+          w-full
+          max-w-[920px]
+          flex flex-col
+          lg:flex-row
+          gap-[30px]
+          mt-[60px]
+          lg:mt-[120px]
+          px-10
+          lg:px-0
+          pb-10
+        "
+      >
+        <div class="lg:flex-1 relative">
           <img
-            class="absolute top-[-56px] left-[-95px]"
+            class="absolute top-[-56px] left-[-95px] hidden lg:block"
             src="/quote.svg"
             alt=""
           />
           <h1
             class="
-              text-[48px]
-              leading-[64px]
+              text-[32px]
+              lg:text-[48px]
+              leading-[48px]
+              lg:leading-[64px]
               font-extrabold
-              max-w-[445px]
+              lg:max-w-[445px]
               scale-100
+              text-center
+              lg:text-left
             "
           >
             Real Stories from Real Customers
           </h1>
 
-          <p class="mt-[8px]">Get inspired by these stories.</p>
+          <p class="mt-[8px] text-center lg:text-left">
+            Get inspired by these stories.
+          </p>
 
-          <div class="flex justify-end">
+          <div class="flex justify-center lg:justify-end">
             <div
-              class="bg-white p-[32px] ml-[95px] mt-[24px] rounded-lg"
+              class="
+                bg-white
+                p-[32px]
+                lg:ml-[95px]
+                mt-[24px]
+                rounded-lg
+                max-w-[450px]
+              "
               style="box-shadow: 0px 10px 20px #29292a12"
             >
               <img src="/logo/hubspot.svg" class="h-[40px] w-auto" alt="" />
@@ -285,9 +366,9 @@
           </div>
         </div>
 
-        <div class="flex-1">
+        <div class="flex-1 flex flex-col items-center lg:items-start">
           <div
-            class="bg-white p-[32px] rounded-lg"
+            class="bg-white p-[32px] rounded-lg max-w-[450px]"
             style="box-shadow: 0px 10px 20px #29292a12"
           >
             <img src="/logo/airbnb.svg" class="h-[40px] w-auto" alt="" />
@@ -313,7 +394,14 @@
             </div>
           </div>
           <div
-            class="bg-white p-[32px] rounded-lg mt-[32px] max-w-[350px]"
+            class="
+              bg-white
+              p-[32px]
+              rounded-lg
+              mt-[32px]
+              lg:max-w-[350px]
+              max-w-[450px]
+            "
             style="box-shadow: 0px 10px 20px #29292a12"
           >
             <img src="/logo/bookmyshow.svg" class="h-[40px] w-auto" alt="" />
@@ -338,42 +426,101 @@
       </div>
     </div>
 
-    <div class="flex justify-center">
-      <div class="w-full max-w-[1110px] py-[80px] flex">
-        <div class="flex-1">
-          <h1 class="text-[48px] leading-[64px] font-extrabold max-w-[540px]">
+    <div class="flex justify-center px-6">
+      <div
+        class="
+          w-full
+          max-w-[1110px]
+          py-[40px]
+          lg:py-[80px]
+          flex flex-col
+          lg:flex-row
+          items-center
+          lg:items-start
+        "
+      >
+        <div class="lg:flex-1">
+          <h1
+            class="
+              text-[32px]
+              leading-[48px]
+              lg:text-[48px] lg:leading-[64px]
+              font-extrabold
+              max-w-[540px]
+              text-center
+              lg:text-left
+            "
+          >
             Our 18 years of achievements
           </h1>
-          <p class="mt-[8px]">With our super powers we have reached this</p>
+          <p class="mt-[8px] text-center lg:text-left">
+            With our super powers we have reached this
+          </p>
         </div>
 
-        <div class="flex-1">
+        <div class="lg:flex-1 mt-[24px] lg:mt-0">
           <div class="grid grid-cols-2 gap-[30px]">
             <div class="flex items-center gap-[16px]">
               <img src="/achievements/icon-1.svg" alt="" />
               <div>
-                <h1 class="text-[28px] leading-[40px] font-bold">10,000+</h1>
+                <h1
+                  class="
+                    text-[20px]
+                    leading-[30px]
+                    lg:text-[28px] lg:leading-[40px]
+                    font-bold
+                  "
+                >
+                  10,000+
+                </h1>
                 <p>Downloads per day</p>
               </div>
             </div>
             <div class="flex items-center gap-[16px]">
               <img src="/achievements/icon-2.svg" alt="" />
               <div>
-                <h1 class="text-[28px] leading-[40px] font-bold">2 Million</h1>
+                <h1
+                  class="
+                    text-[20px]
+                    leading-[30px]
+                    lg:text-[28px] lg:leading-[40px]
+                    font-bold
+                  "
+                >
+                  2 Million
+                </h1>
                 <p>Users</p>
               </div>
             </div>
             <div class="flex items-center gap-[16px]">
               <img src="/achievements/icon-3.svg" alt="" />
               <div>
-                <h1 class="text-[28px] leading-[40px] font-bold">500+</h1>
+                <h1
+                  class="
+                    text-[20px]
+                    leading-[30px]
+                    lg:text-[28px] lg:leading-[40px]
+                    font-bold
+                  "
+                >
+                  500+
+                </h1>
                 <p>Clients</p>
               </div>
             </div>
             <div class="flex items-center gap-[16px]">
               <img src="/achievements/icon-4.svg" alt="" />
               <div>
-                <h1 class="text-[28px] leading-[40px] font-bold">140</h1>
+                <h1
+                  class="
+                    text-[20px]
+                    leading-[30px]
+                    lg:text-[28px] lg:leading-[40px]
+                    font-bold
+                  "
+                >
+                  140
+                </h1>
                 <p>Countries</p>
               </div>
             </div>
@@ -383,8 +530,19 @@
     </div>
 
     <div class="flex justify-center">
-      <div class="w-full max-w-[1110px] flex items-center gap-[30px] py-[64px]">
-        <div class="flex-1">
+      <div
+        class="
+          w-full
+          max-w-[1110px]
+          flex
+          items-center
+          gap-[30px]
+          md:py-[64px]
+          flex-col
+          md:flex-row
+        "
+      >
+        <div class="flex-1 w-full md:w-auto">
           <div class="w-full h-0 pb-[100%] relative">
             <div
               class="
@@ -410,8 +568,25 @@
           </div>
         </div>
 
-        <div class="flex-1 flex flex-col items-start gap-[32px] px-[48px]">
-          <h1 class="text-[40px] leading-[54px] font-extrabold">Headline</h1>
+        <div
+          class="
+            flex-1 flex flex-col
+            items-start
+            gap-[20px]
+            lg:gap-[32px] lg:px-[48px]
+            px-6
+          "
+        >
+          <h1
+            class="
+              text-[32px]
+              leading-[40px]
+              lg:text-[40px] lg:leading-[54px]
+              font-extrabold
+            "
+          >
+            Headline
+          </h1>
 
           <p class="font-[18px] leading-[32px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
@@ -428,17 +603,25 @@
       </div>
     </div>
 
-    <div class="flex justify-center">
+    <div class="flex justify-center px-6">
       <div class="w-full max-w-[1110px] my-[64px]">
-        <div class="flex">
+        <div class="flex flex-col md:flex-row">
           <div class="flex-1">
-            <h1 class="text-[40px] leading-[54px] font-extrabold max-w-[540px]">
+            <h1
+              class="
+                text-[32px]
+                leading-[40px]
+                md:text-[40px] md:leading-[54px]
+                font-extrabold
+                md:max-w-[540px]
+              "
+            >
               Enter the world of all fashion trends
             </h1>
           </div>
 
           <div class="flex-1">
-            <p class="max-w-[540px] text-[18px] leading-[32px]">
+            <p class="md:max-w-[540px] text-[18px] leading-[32px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis
               scelerisque at quam congue posuere libero in sit quam. Consequat,
               scelerisque non tincidunt sit lectus senectus.
@@ -454,10 +637,18 @@
       </div>
     </div>
 
-    <div class="flex justify-center bg-[#2EC5CE] min-h-[491px]">
-      <div class="w-full max-w-[1110px] flex items-center">
+    <div class="flex justify-center bg-[#2EC5CE] min-h-[491px] px-6">
+      <div class="w-full max-w-[1110px] flex items-center flex-col lg:flex-row">
         <div class="flex-1">
-          <h1 class="text-[48px] leading-[64px] font-extrabold">
+          <h1
+            class="
+              text-[32px]
+              leading-[48px]
+              mt-6
+              lg:mt-0 lg:text-[48px] lg:leading-[64px]
+              font-extrabold
+            "
+          >
             Manage your projects from your mobile
           </h1>
           <p class="mt-[8px]">
@@ -466,19 +657,38 @@
             complete on time!
           </p>
 
-          <p class="mt-[48px]">Get the App</p>
+          <p class="mt-[24px] lg:mt-[48px]">Get the App</p>
 
-          <div class="flex mt-[8px]">
-            <img src="/google-play.svg" alt="" />
-            <img src="/appstore.svg" alt="" />
+          <div class="flex mt-[8px] mb-[24px] lg:mb-0">
+            <a href="#">
+              <img src="/google-play.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="/appstore.svg" alt="" />
+            </a>
           </div>
         </div>
 
-        <div class="flex-1 flex items-stretch justify-center gap-[32px] h-full">
+        <div
+          class="
+            flex-1 flex
+            items-stretch
+            justify-center
+            gap-[32px]
+            h-full
+            mt-[24px]
+            lg:mt-0
+          "
+        >
           <div>
             <img
-              class="phone-shadow w-[232px] h-auto"
+              class="phone-shadow w-[232px] h-auto hidden lg:block"
               src="/iphone-1.png"
+              alt=""
+            />
+            <img
+              class="phone-shadow w-[232px] h-auto block lg:hidden"
+              src="/iphone-1-res.png"
               alt=""
             />
           </div>
@@ -493,8 +703,20 @@
       </div>
     </div>
 
-    <div class="flex justify-center bg-[#0B0D17] text-white min-h-[280px]">
-      <div class="w-full max-w-[1110px] flex items-center justify-between">
+    <div class="flex justify-center bg-[#0B0D17] text-white min-h-[280px] px-6">
+      <div
+        class="
+          w-full
+          max-w-[1110px]
+          flex
+          md:items-center
+          justify-between
+          flex-col
+          md:flex-row
+          py-10
+          md:py-0
+        "
+      >
         <div class="flex flex-col gap-[24px]">
           <div>
             <img src="/logo.svg" alt="" />
@@ -503,7 +725,7 @@
             <p>Download Now</p>
             <p>License</p>
           </div>
-          <div class="flex gap-[24px]">
+          <div class="flex gap-[24px] flex-wrap">
             <p>About</p>
             <p>Features</p>
             <p>Pricing</p>
@@ -515,13 +737,15 @@
           <p>&copy; 2020 Landify UI Kit. All rights reserved</p>
         </div>
 
-        <div class="flex flex-col gap-[24px]">
+        <div class="flex flex-col gap-[24px] mt-10 md:mt-0">
           <p>Get The App</p>
-          <div>
-            <img src="/appstore.svg" alt="" />
-          </div>
-          <div>
-            <img src="/google-play.svg" alt="" />
+          <div class="flex md:flex-col gap-[24px]">
+            <a href="#">
+              <img src="/appstore.svg" alt="" />
+            </a>
+            <a href="#">
+              <img src="/google-play.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>
